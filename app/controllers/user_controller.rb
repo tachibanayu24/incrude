@@ -1,4 +1,5 @@
 class UserController < ApplicationController
+  before_action :current_user
   def signup
   end
 
@@ -26,4 +27,10 @@ class UserController < ApplicationController
       redirect_to root_path, notice: "失敗しました。"
     end
   end
+
+  def current_user
+    return unless session[:user_id]
+    @current_user ||= User.find(session[:user_id])
+  end
+
 end
