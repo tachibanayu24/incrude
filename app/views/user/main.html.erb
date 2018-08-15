@@ -1,2 +1,12 @@
 <h1>User#main</h1>
 <p>Find me in app/views/user/main.html.erb</p>
+
+<% if @current_user.count > 0 %>
+  <p>あなたは現在<%= @current_user.count %>日労働しています！</p>
+  <% else %>
+  <p>まだあなたは労働スタンプを押していません。スタンプを押して、労働のよろこびを共有しましょう！</p>
+  <% end %>
+<p>昨日したこと：<%= @work_msg %></p>
+<p>昨日したことサブ：<%= @work_msg_sub %></p>
+
+<%= link_to("労働カウント このリンクをスタンプっぽくして","/user/count", :method => :post) %>

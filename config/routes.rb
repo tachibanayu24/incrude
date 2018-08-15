@@ -13,7 +13,9 @@ Rails.application.routes.draw do
 
   get 'user/reset'
 
-  get 'user/main' => 'user#mypage'
+  get 'user/main' => 'user#main'
+
+  post 'user/count' => 'user#count'
 
   get '/about' => 'home#about'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
