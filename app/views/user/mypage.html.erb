@@ -1,8 +1,10 @@
 <h1>User#mypage</h1>
 <p>Find me in app/views/user/mypage.html.erb</p>
 
+
+↓ユーザ情報　これをいい感じに使ってビューを作る
 <p>uid:<%= @current_user.uid %></p>
 <p>count:<%= @current_user.count %></p>
 <p>ID:@<%= @current_user.twitter_id %></p>
 <p>name:<%= @current_user.name %></p>
-<p>image:</p><img src= <%= @current_user.image %> >
+<p>image:</p><img src= "<%= @current_user.image %>" class="user_icon" >

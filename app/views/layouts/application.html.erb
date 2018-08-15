@@ -8,20 +8,33 @@
     <link href="./assets/stylesheets/vendor/bootstrap.min.css" rel="stylesheet">
     <link href="./assets/stylesheets/flat-ui.min.css" rel="stylesheet">
   </head>
+
   <header>
     <div class="text-right">
       logo
     </div>
-    <button type="button" class="btn btn-danger text-right" onclick="location.href='/user/mypage'">@[username]</button>
-    <button type="button" class="btn btn-info text-right" onclick="location.href='/user/main'">スタンプを押す</button>
-    <div class="text-left">
-      <button type="button" class="btn btn-primary text-right" onclick="location.href='/auth/twitter'">Twitterでサインイン</button>
+    <% if session[:user_id] %>
+      <button type="button" class="btn btn-danger text-right" onclick="location.href='/user/mypage'">@<%= @current_user.twitter_id %></button>
+      <button type="button" class="btn btn-info text-right" onclick="location.href='/user/main'">スタンプを押す</button>
       <button type="button" class="btn btn-warning" onclick="location.href='/user/signout'">サインアウト</button>
-    </div>
+    <% else %>
+      <button type="button" class="btn btn-primary text-right" onclick="location.href='/auth/twitter'">Twitterでサインイン</button>
+    <% end %>
+    <!-- <div class="text-left"> -->
+    <!-- </div> -->
   </header>
+
   <body>
+<!-- ここからフラッシュメッセージ -->
+  <% if flash[:notice] %>
+    <div class="notice">
+      <%= flash[:notice]%>
+    </div>
+  <% end %>
+<!-- ここまでフラッシュメッセージ -->
     <%= yield %>
   </body>
+
   <footer>
   <%= link_to("About us", "/about") %>
   <p class="text-center">

@@ -7,7 +7,7 @@ Rails.application.routes.draw do
 
   get 'user/signin'
 
-  get 'user/signout', to: 'sessions#destroy'
+  get 'user/signout' => 'sessions#destroy'
 
   get 'user/mypage' => 'user#mypage'
 

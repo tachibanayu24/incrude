@@ -16,6 +16,9 @@
 #logo {
 
 }
+#user_icon img {
+  border-radius: 50%;
+}
 
 header {
   background-color: #66cdaa;
