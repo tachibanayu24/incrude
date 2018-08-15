@@ -9,16 +9,15 @@
     <link href="./assets/stylesheets/flat-ui.min.css" rel="stylesheet">
   </head>
   <header>
-    <div>
+    <div class="text-right">
       logo
     </div>
-    <%= link_to("TOP", "/") %>
-    <%= link_to("@[username]", "/user/mypage") %>
-    <%= link_to("スタンプを押す", "/user/main") %>
-    <br>
-    <button type="button" class="btn btn-info text-right" onclick="location.href='/user/signup'">Twitterで登録</button>
-    <button type="button" class="btn btn-primary text-right" onclick="location.href='/user/signin'">サインイン</button>
-    <button type="button" class="btn btn-warning" onclick="location.href='/user/signout'">サインアウト</button>
+    <button type="button" class="btn btn-danger text-right" onclick="location.href='/user/mypage'">@[username]</button>
+    <button type="button" class="btn btn-info text-right" onclick="location.href='/user/main'">スタンプを押す</button>
+    <div class="text-left">
+      <button type="button" class="btn btn-primary text-right" onclick="location.href='/auth/twitter'">Twitterでサインイン</button>
+      <button type="button" class="btn btn-warning" onclick="location.href='/user/signout'">サインアウト</button>
+    </div>
   </header>
   <body>
     <%= yield %>
