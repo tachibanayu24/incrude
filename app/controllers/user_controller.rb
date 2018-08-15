@@ -44,6 +44,8 @@ class UserController < ApplicationController
   end
 
 def count
+  @current_user.count += 1
+  @current_user.save
   redirect_to("/user/mypage")
 end
 
