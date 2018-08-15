@@ -12,14 +12,19 @@
   <header>
     <div class="text-left">
       <%= image_tag('incrudelogo.png', :size => '200x53') %>
-    </div>
     <% if session[:user_id] %>
-      <button type="button" class="btn btn-danger text-right" onclick="location.href='/user/mypage'">@<%= @current_user.twitter_id %></button>
-      <button type="button" class="btn btn-info text-right" onclick="location.href='/user/main'">スタンプを押す</button>
-      <button type="button" class="btn btn-warning" onclick="location.href='/user/signout'">サインアウト</button>
+    <div class="ui-slider-value">
+      <button type="button" class="btn btn-danger pull-right" onclick="location.href='/user/mypage'">@<%= @current_user.twitter_id %></button>
+      <button type="button" class="btn btn-info pull-right" onclick="location.href='/user/main'">スタンプを押す</button>
+      <button type="button" class="btn btn-warning pull-right" onclick="location.href='/user/signout'">サインアウト</button>
+    </div>
     <% else %>
-      <button type="button" class="btn btn-primary text-right" onclick="location.href='/auth/twitter'">Twitterでサインイン</button>
+    <div class="ui-slider-value">
+      <button type="button" class="btn btn-primary c" onclick="location.href='/auth/twitter'">Twitterでサインイン</button>
+    </div>
+    </div>
     <% end %>
+    <div class="clear"></div>
     <!-- <div class="text-left"> -->
     <!-- </div> -->
   </header>
@@ -27,7 +32,7 @@
   <body>
 <!-- ここからフラッシュメッセージ -->
   <% if flash[:notice] %>
-    <div class="notice">
+    <div class="notice lead text-center">
       <%= flash[:notice]%>
     </div>
   <% end %>
