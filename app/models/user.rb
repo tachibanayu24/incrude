@@ -4,10 +4,12 @@ class User < ApplicationRecord
     uid = auth[:uid]
     name = auth[:info][:name]
     image = auth[:info][:image]
+    twitter_id = auth[:info][:twitter_id]
 
     self.find_or_create_by(provider: provider, uid: uid) do |user|
       user.name = name
       user.image = image
+      user.twitter_id = twitter_id
     end
   end
 end
