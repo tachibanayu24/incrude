@@ -19,17 +19,16 @@
     <button type="button" class="btn btn-info text-right" onclick="location.href='/user/signup'">Twitterで登録</button>
     <button type="button" class="btn btn-primary text-right" onclick="location.href='/user/signin'">サインイン</button>
     <button type="button" class="btn btn-warning" onclick="location.href='/user/signout'">サインアウト</button>
-    <%= link_to("Twitterで登録", "/user/signup") %>
-    <%= link_to("サインイン", "/user/signin") %>
-    <%= link_to("@[username]", "/user/mypage") %>
-    <%= link_to("スタンプを押す", "/user/main") %>
-    <%= link_to("サインアウト", "/user/signout") %>
   </header>
   <body>
     <%= yield %>
   </body>
   <footer>
   <%= link_to("About us", "/about") %>
+  <p class="text-center">
+  <%= image_tag('twitter.png', :size => '24x24') %><!-- 
+  <a href="https://www.google.com"><img src="twitter.png" alt="twitter_freeicon"></a>  -->
+  </p>
   <div id="copy_light">
     <p class="text-center"><small>Yuto Tachibana, Kenki Seki &copy; 2018</small></p>
   </div>
