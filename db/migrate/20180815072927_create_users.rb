@@ -1,8 +1,7 @@
 class CreateUsers < ActiveRecord::Migration[5.1]
   def change
     create_table :users do |t|
-      t.string :twitter_account_name
-      t.integer :count
+      t.integer :count, default: 0
 
       t.timestamps
     end
