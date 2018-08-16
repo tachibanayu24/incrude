@@ -1,27 +1,49 @@
 <div class="row">
   <div class="col-sm-4 text-center">
-    <h1><%= @current_user.name %></h1>
-    <img src= "<%= @current_user.image %>" class="user_img" width="150" height="150">
-    <p>ID:@<%= @current_user.twitter_id %></p>
+    <h3 class="bg-info" style="padding: 5px;"><%= @current_user.name %></h3>
+    <img src= "<%= @current_user.image %>" class="user_img" width="100" height="100">
+    <div class="twitter_id">
+      <p>@<%= @current_user.twitter_id %></p>
+    </div>
   </div>
   <div class="col-sm-8 text-left">
     <div>
       <h1><br></h1>
     </div>
     <p class="font_forcus">
-      あなたは出勤日数count:<%= @current_user.count %>日目です！
+      労働スタンプは<%= @current_user.count %>回押されています。
     </p>
       <p>
-        昨日したこと: <%= @work_msg %><br>
-        昨日したことサブ: <%= @work_msg_sub %>
+        <%= @work_msg %><br>
+        <%= @work_msg_sub %>
       </p>
     </font>
   </div>
 </div>
 <div class="text-right">
-  <button type="button" class="btn btn-info mypage_button" onclick="location.href=''">あなたのがんばりをシェア</button>
-  <br>
-  <button type="button" class="btn btn-danger mypage_button" onclick="location.href=''">リセット(労働日数をリセット)</button>
+  <button type="button" class="btn btn-info mypage_button" onclick="location.href=''" style="margin-bottom: 10px;">あなたのがんばりをシェア</button><br>
+  <!-- 1.モーダルを表示する為のボタン -->
+  <button class="btn btn-danger mypage_button" data-toggle="modal" data-target="#exampleModalCenter" style="margin-bottom: 40px;">
+      労働日数をリセット
+  </button>
 </div>
 
-<%= link_to("リセットするやつ","/user/reset", :method => :post) %>
+<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">労働日数をリセットしますか？</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        この操作は取り消せません。<br>リセット後は、同期を倒すところからスタートします。
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">閉じる</button>
+        <%= link_to "実行", "/user/reset", class: 'btn btn-danger', :method => :post %>
+      </div>
+    </div>
+  </div>
+</div>

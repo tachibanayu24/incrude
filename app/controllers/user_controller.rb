@@ -53,7 +53,7 @@ end
     @work_state7_sub = "ブラック企業を消し去りました！"
     @work_state8_or_up_sub = "明日も会社を爆破しましょう！"
 
-        if    @current_user.count == 0 then
+    if    @current_user.count == 0 then
       @work_msg = @work_state0
       @work_msg_sub = @work_state0_sub
     elsif @current_user.count == 1 then
