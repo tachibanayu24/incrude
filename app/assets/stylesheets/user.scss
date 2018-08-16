@@ -33,16 +33,39 @@
 
 .stamp {
   background-color: #e8e8e8;
-  height: 300px;
-  width: 300px;
   border-radius: 50%;
+  height: 250px;
+  width: 250px;
   margin: auto ;
   line-height: 300px;
   position: relative;
 }
 
 .stamp_image {
-  vertical-align:middle;
+  margin: auto auto auto auto;
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-image:url(stamp.png);
+  background-repeat: no-repeat;
+  text-indent: -10000px;
+  list-style:none;
+}
+
+.stamp_image:hover{
+  opacity:0.5;
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-image:url(stamp_hover.png);
+  background-repeat: no-repeat;
+  text-indent: -10000px;
+  list-style: none;
+}
+
+.stamp_image:active{
+  position: relative;
+  top: 3px;
 }
 
 .stamp_push {
