@@ -2,6 +2,16 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-#user_icon img {
+
+.user_img {
   border-radius: 50%;
+}
+
+.mypage_button {
+  margin: 5px 10px;
+}
+
+.font_forcus {
+  font-size: 2.0rem;
+  font-weight:bold;
 }
