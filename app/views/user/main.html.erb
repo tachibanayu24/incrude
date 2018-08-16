@@ -1,14 +1,16 @@
 
-
-<h1>User#main</h1>
-<p>Find me in app/views/user/main.html.erb</p>
-
-<% if @current_user.count > 0 %>
-  <p>あなたは現在<%= @current_user.count %>日労働しています！</p>
+<div class="stamp_description">
+  <% if @current_user.count > 0 %>
+    <span class="stamp_description_main">現在<strong><%= @current_user.count %>個</strong>の労働スタンプが押されています！</span><br>
+    <span class="stamp_description_sub"><%= @work_msg %></span><br>
+    <span class="stamp_description_sub"><%= @work_msg_sub %></span>
   <% else %>
-  <p>まだあなたは労働スタンプを押していません。スタンプを押して、労働のよろこびを共有しましょう！</p>
+    <span class="stamp_description_main">まだあなたは労働スタンプを押していません。</span><br>
+    <span class="stamp_description_sub">スタンプを押して、労働のよろこびを共有しましょう！</span>
   <% end %>
-<p>昨日したこと：<%= @work_msg %></p>
-<p>昨日したことサブ：<%= @work_msg_sub %></p>
+</div>
 
-<%= link_to image_tag("stamp.png"), "/user/count", :method => :post %>
+<div class="stamp">
+  <span class="stamp_image"><%= link_to image_tag("stamp.png"), "/user/count", :method => :post %></span>
+</div>
+<span class="stamp_push">今日も頑張った方は、スタンプを押してください</span>
