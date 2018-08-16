@@ -1,6 +1,11 @@
 class HomeController < ApplicationController
   before_action :current_user
   def index
+    user = User.all()
+    @sumCount = 0
+    user.each do |user|
+      @sumCount += user.count
+    end
   end
 
   def about

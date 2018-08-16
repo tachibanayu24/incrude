@@ -11,11 +11,11 @@ Rails.application.routes.draw do
 
   get 'user/mypage' => 'user#mypage'
 
-  get 'user/reset'
-
   get 'user/main' => 'user#main'
 
   post 'user/count' => 'user#count'
+
+  post 'user/reset' => 'user#reset'
 
   get '/about' => 'home#about'
 
