@@ -14,3 +14,8 @@
   <button type="button" class="btn btn-info" onclick="location.href=''">あなたのがんばりをシェア</button>
   <button type="button" class="btn btn-info" onclick="location.href=''">リセット(労働日数を)</button>
 </div>
+
+<p>昨日したこと: <%= @work_msg %></p>
+<p>昨日したことサブ: <%= @work_msg_sub %></p>
+
+<%= link_to(“リセットするやつ“,”/user/reset”, :method => :post) %>
