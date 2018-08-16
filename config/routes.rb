@@ -18,5 +18,8 @@ Rails.application.routes.draw do
   post 'user/count' => 'user#count'
 
   get '/about' => 'home#about'
+
+  # テストアカウントのログイン
+  get 'sessions/testCreate' => 'sessions#testCreate'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

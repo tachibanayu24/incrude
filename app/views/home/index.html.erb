@@ -4,29 +4,52 @@
   <div class="catchphrase_main"><p class="catchphrase_main">労働のよろこびを感じよう</p></div>
   <p class="catchphrase_sub">1日1回、労働後はincrudeで労働スタンプを押しましょう<br>
   あなたの会社が良くなる様をフォロワーにシェアできます</p>
-  <button type="button" class="btn btn-primary btn-lg start_button">今すぐはじめる</button>
+  <button type="button" class="btn btn-primary btn-lg start_button" onclick="location.href='/auth/twitter'">今すぐはじめる</button>
 </div>
 <!-- キャッチフレーズ終わり -->
 <!-- 使い方はじめ -->
-<div class="container-fluid">
+<div class="container-fluid desctiption_parent">
   <div class="row">
-    <div class="col-sm-2 description">
+    <div class="col-sm-3 description">
       <p>Step.1</p>
-      <p>労働のよろこびを感じます</p>
+      <%= image_tag('dummy.png', :size => '150x150') %><br>
+      <span class="description_text">労働のよろこびを感じます</span>
     </div>
-    <div class="col-sm-2 description">
+    <div class="col-sm-3 description">
       <p>Step.2</p>
-      <p>Twitterでサインインします</p>
+      <%= image_tag('dummy.png', :size => '150x150') %><br>
+      <span class="description_text">Twitterでサインインします</span>
     </div>
-    <div class="col-sm-2 description">
+    <div class="col-sm-3 description">
       <p>Step.3</p>
-      <p>チカラを込めてスタンプを押します</p>
+      <%= image_tag('dummy.png', :size => '150x150') %><br>
+      <span class="description_text">チカラを込めてスタンプを押します</span>
     </div>
-    <div class="col-sm-2 description">
+    <div class="col-sm-3 description">
       <p>Step.4</p>
-      <p>あなたの労働環境が改善されます</p>
+      <%= image_tag('dummy.png', :size => '150x150') %><br>
+      <span class="description_text">あなたの労働環境が改善されます</span>
     </div>
   </div>
 </div>
 <!-- 使いかた終わり -->
+<%= link_to("開発用 テストアカウントでのログインはこちら", "sessions/testCreate") %>
 
+<!-- 累計カウント始まり -->
+<div class="container-fluid destroy_parent">
+  <div class="row">
+    <div class="col-sm-4 destroy">
+      <p>みんなが労働した日数</p>
+      <div class="sum_count background_green">1234日</div>
+    </div>
+    <div class="col-sm-4 destroy">
+      <p>みんなが倒した上司や同僚の人数</p>
+      <div class="sum_count background_violet">1234人</div>
+    </div>
+    <div class="col-sm-4 destroy">
+      <p>みんなが会社を破壊した回数</p>
+      <div class="sum_count background_salmon">1234回</div>
+    </div>
+  </div>
+</div>
+<!-- 累計カウント終わり -->

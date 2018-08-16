@@ -6,6 +6,14 @@ class SessionsController < ApplicationController
     redirect_to('/user/mypage')
   end
 
+# テストアカウントへのログインアクション
+  def testCreate
+    user = User.find_by(id: 8)
+    session[:user_id] = user.id
+    flash[:notice] = "ユーザー認証が完了しました。"
+    redirect_to('/user/mypage')
+  end
+
   def destroy
     reset_session
     flash[:notice] = "サインアウトしました。"
