@@ -11,7 +11,7 @@
 
   <header>
     <div class="text-left logo">
-      <%= image_tag('incrudelogo.png', :size => '300x75') %>
+      <a href="/"><%= image_tag('incrudelogo.png', :size => '300x75') %></a>
   <% if session[:user_id] %>
     <div class="ui-slider-value">
       <button type="button" class="btn btn-danger pull-right page_button" onclick="location.href='/user/mypage'">@<%= @current_user.twitter_id %></button>
