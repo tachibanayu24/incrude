@@ -12,30 +12,31 @@
   <header>
     <div class="text-left logo">
       <%= image_tag('incrudelogo.png', :size => '300x75') %>
-    <% if session[:user_id] %>
+  <% if session[:user_id] %>
     <div class="ui-slider-value">
       <button type="button" class="btn btn-danger pull-right page_button" onclick="location.href='/user/mypage'">@<%= @current_user.twitter_id %></button>
       <button type="button" class="btn btn-info pull-right page_button" onclick="location.href='/user/main'">スタンプを押す</button>
       <button type="button" class="btn btn-warning pull-right page_button" onclick="location.href='/user/signout'">サインアウト</button>
     </div>
-    <% else %>
+  <% else %>
     <div class="ui-slider-value">
       <button type="button" class="btn btn-primary text-right" onclick="location.href='/auth/twitter'">Twitterでサインイン</button>
     </div>
-    </div>
-    <% end %>
+  </div>
+  <% end %>
     <div class="clear"></div>
   </header>
 
   <body>
 <!-- ここからフラッシュメッセージ -->
   <% if flash[:notice] %>
-    <div class="notice lead text-center">
+    <div class="notice lead text-center flash">
       <%= flash[:notice]%>
     </div>
   <% end %>
 <!-- ここまでフラッシュメッセージ -->
     <%= yield %>
+
   </body>
 
   <footer>

@@ -27,6 +27,18 @@ header {
   margin: 10px 3px;
 }
 
+.flash {
+  width: 400px;
+  background-color:#409ecc;
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+  color: #fff;
+  font-size: 14px;
+  margin: 0 auto;
+}
+
 footer {
   background-color: #000;
   color : #fff;
