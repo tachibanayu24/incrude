@@ -2518,7 +2518,6 @@ fieldset[disabled] .input-group-btn .btn-default.active {
 .ui-slider-value {
   float: right;
   font-size: 13px;
-  /*margin-top: 5px;*/
 }
 
 .ui-slider-value.first {

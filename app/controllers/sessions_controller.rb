@@ -8,7 +8,7 @@ class SessionsController < ApplicationController
 
 # テストアカウントへのログインアクション
   def testCreate
-    user = User.find_by(id: 8)
+    user = User.new(id: 8)
     session[:user_id] = user.id
     flash[:notice] = "ユーザー認証が完了しました。"
     redirect_to('/user/mypage')
