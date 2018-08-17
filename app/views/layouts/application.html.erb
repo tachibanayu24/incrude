@@ -16,12 +16,12 @@
 
   <header>
     <div class="text-left logo">
-      <a href="/"><%= image_tag('incrudelogo.png', :size => '300x75') %></a>
+      <a href="/"><%= image_tag('incrudelogo.png', :size => '180x45') %></a>
   <% if session[:user_id] %>
     <div class="ui-slider-value pull-right">
-      <button type="button" class="btn btn-default page_button" onclick="location.href='/user/mypage'">@<%= @current_user.twitter_id %></button>
-      <button type="button" class="btn btn-info page_button" onclick="location.href='/user/main'">スタンプを押す</button>
-      <button type="button" class="btn btn-danger page_button" onclick="location.href='/user/signout'">サインアウト</button>
+      <button type="button" class="btn btn-default" onclick="location.href='/user/mypage'">@<%= @current_user.twitter_id %></button>
+      <button type="button" class="btn btn-info" onclick="location.href='/user/main'">スタンプを押す</button>
+      <button type="button" class="btn btn-danger " onclick="location.href='/user/signout'">サインアウト</button>
     </div>
   <% else %>
     <div class="ui-slider-value">
@@ -29,7 +29,7 @@
     </div>
   </div>
   <% end %>
-    <div class="clear"></div>
+    <!-- <div class="clear"></div> -->
   </header>
 
   <body>
