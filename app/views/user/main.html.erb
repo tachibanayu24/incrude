@@ -1,4 +1,4 @@
-
+<h3 class="about_title text-center">労働スタンプを押す</h3>
 <div class="stamp_description">
   <% if @current_user.count > 0 %>
     <span class="stamp_description_main">現在<strong><%= @current_user.count %>個</strong>の労働スタンプが押されています！</span><br>
@@ -37,32 +37,32 @@
 
           <% elsif @current_user.count == 3 %>
             <p class="modal_main"><%= @work_state3 %></p><br>
-            <%= image_tag("dummy.png", class: 'modal_icon') %><br>
+            <%= image_tag("work_state3.png", class: 'modal_icon') %><br>
             <p class="modal_sub"><%= @work_state3_sub %></p>
 
           <% elsif @current_user.count == 4 %>
             <p class="modal_main"><%= @work_state4 %></p><br>
-            <%= image_tag("dummy.png", class: 'modal_icon') %><br>
+            <%= image_tag("work_state4.png", class: 'modal_icon') %><br>
             <p class="modal_sub"><%= @work_state4_sub %></p>
 
           <% elsif @current_user.count == 5 %>
             <p class="modal_main"><%= @work_state5 %></p><br>
-            <%= image_tag("dummy.png", class: 'modal_icon') %><br>
+            <%= image_tag("work_state5.png", class: 'modal_icon') %><br>
             <p class="modal_sub"><%= @work_state5_sub %></p>
 
           <% elsif @current_user.count == 6 %>
             <p class="modal_main"><%= @work_state6 %></p><br>
-            <%= image_tag("dummy.png", class: 'modal_icon') %><br>
+            <%= image_tag("work_state6.png", class: 'modal_icon') %><br>
             <p class="modal_sub"><%= @work_state6_sub %></p>
 
           <% elsif @current_user.count == 7 %>
             <p class="modal_main"><%= @work_state7 %></p><br>
-            <%= image_tag("dummy.png", class: 'modal_icon') %><br>
+            <%= image_tag("work_state7.png", class: 'modal_icon') %><br>
             <p class="modal_sub"><%= @work_state7_sub %></p>
 
           <% else %>
             <p class="modal_main"><%= @work_state8_or_up %></p><br>
-            <%= image_tag("dummy.png", class: 'modal_icon') %><br>
+            <%= image_tag("work_state8_or_up.png", class: 'modal_icon') %><br>
             <p class="modal_sub"><%= @work_state8_or_up_sub %></p>
           <% end %>
         </div>
