@@ -1,3 +1,8 @@
+<% if flash[:notice] %>
+  <div class="notice lead text-center flash" style="font-size: small;">
+    <%= flash[:notice]%>
+  </div>
+<% end %>
 <div class="text-center">
     <!-- <h3 class="bg-info" style="padding: 5px;"><%= @current_user.name %></h3> -->
     <h3 class="about_title"><%= @current_user.name %></h3>
