@@ -28,42 +28,83 @@
           <% if @current_user.count == 1 %>
             <p class="modal_main"><%= @work_state1 %></p><br>
             <%= image_tag("work_state1.png", class: 'modal_icon') %><br>
-            <p class="modal_sub"><%= @work_state1_sub %></p>
+            <p class="modal_sub"><%= @work_state1_sub %></p><br>
+            <p>フォロワーに頑張りを伝えよう！</p>
+            <a href="https://twitter.com/share" class="twitter-share-button" data-text=
+"<%= @current_user.count %>日目の労働を終えました。今日は<%= @work_state1 %>。<%= @work_state1_sub %>
+#incRude">tweet</a>
+  <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
           <% elsif @current_user.count == 2 %>
             <p class="modal_main"><%= @work_state2 %></p><br>
             <%= image_tag("work_state2.png", class: 'modal_icon') %><br>
-            <p class="modal_sub"><%= @work_state2_sub %></p>
+            <p class="modal_sub"><%= @work_state2_sub %></p><br>
+            <p>フォロワーに頑張りを伝えよう！</p>
+            <a href="https://twitter.com/share" class="twitter-share-button" data-text=
+"<%= @current_user.count %>日目の労働を終えました。今日は<%= @work_state2 %>。<%= @work_state2_sub %>
+#incRude">tweet</a>
+  <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
           <% elsif @current_user.count == 3 %>
             <p class="modal_main"><%= @work_state3 %></p><br>
             <%= image_tag("work_state3.png", class: 'modal_icon') %><br>
-            <p class="modal_sub"><%= @work_state3_sub %></p>
+            <p class="modal_sub"><%= @work_state3_sub %></p><br>
+            <p>フォロワーに頑張りを伝えよう！</p>
+            <a href="https://twitter.com/share" class="twitter-share-button" data-text=
+"<%= @current_user.count %>日目の労働を終えました。今日は<%= @work_state3 %>。<%= @work_state3_sub %>
+#incRude">tweet</a>
+  <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
           <% elsif @current_user.count == 4 %>
             <p class="modal_main"><%= @work_state4 %></p><br>
             <%= image_tag("work_state4.png", class: 'modal_icon') %><br>
-            <p class="modal_sub"><%= @work_state4_sub %></p>
+            <p class="modal_sub"><%= @work_state4_sub %></p><br>
+            <p>フォロワーに頑張りを伝えよう！</p>
+            <a href="https://twitter.com/share" class="twitter-share-button" data-text=
+"<%= @current_user.count %>日目の労働を終えました。今日は<%= @work_state4 %>。<%= @work_state4_sub %>
+#incRude">tweet</a>
+  <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
           <% elsif @current_user.count == 5 %>
             <p class="modal_main"><%= @work_state5 %></p><br>
             <%= image_tag("work_state5.png", class: 'modal_icon') %><br>
-            <p class="modal_sub"><%= @work_state5_sub %></p>
+            <p class="modal_sub"><%= @work_state5_sub %></p><br>
+            <p>フォロワーに頑張りを伝えよう！</p>
+            <a href="https://twitter.com/share" class="twitter-share-button" data-text=
+"<%= @current_user.count %>日目の労働を終えました。今日は<%= @work_state5 %>。<%= @work_state5_sub %>
+#incRude">tweet</a>
+  <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
           <% elsif @current_user.count == 6 %>
             <p class="modal_main"><%= @work_state6 %></p><br>
             <%= image_tag("work_state6.png", class: 'modal_icon') %><br>
-            <p class="modal_sub"><%= @work_state6_sub %></p>
+            <p class="modal_sub"><%= @work_state6_sub %></p><br>
+            <p>フォロワーに頑張りを伝えよう！</p>
+            <a href="https://twitter.com/share" class="twitter-share-button" data-text=
+"<%= @current_user.count %>日目の労働を終えました。今日は<%= @work_state6 %>。<%= @work_state6_sub %>
+#incRude">tweet</a>
+  <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
           <% elsif @current_user.count == 7 %>
             <p class="modal_main"><%= @work_state7 %></p><br>
             <%= image_tag("work_state7.png", class: 'modal_icon') %><br>
-            <p class="modal_sub"><%= @work_state7_sub %></p>
+            <p class="modal_sub"><%= @work_state7_sub %></p><br>
+            <p>フォロワーに頑張りを伝えよう！</p>
+            <a href="https://twitter.com/share" class="twitter-share-button" data-text=
+"<%= @current_user.count %>日目の労働を終えました。今日は<%= @work_state7 %>。<%= @work_state7_sub %>
+#incRude">tweet</a>
+  <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
           <% else %>
             <p class="modal_main"><%= @work_state8_or_up %></p><br>
             <%= image_tag("work_state8_or_up.png", class: 'modal_icon') %><br>
             <p class="modal_sub"><%= @work_state8_or_up_sub %></p>
+            <p>フォロワーに頑張りを伝えよう！</p>
+            <a href="https://twitter.com/share" class="twitter-share-button" data-text=
+"<%= @current_user.count %>日目の労働を終えました。今日は<%= @work_state8_or_up %>。<%= @work_state8_or_up_sub %>
+#incRude">tweet</a>
+  <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
           <% end %>
         </div>
         <div class="modal-footer">

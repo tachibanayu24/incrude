@@ -1,15 +1,6 @@
 class UserController < ApplicationController
-  before_action :current_user, :const_work_state, :current_work_state
+  before_action :main, :current_user, :const_work_state, :current_work_state
   # after_action :work_state
-  def signup
-  end
-
-  def signin
-  end
-
-  def signout
-  end
-
   def mypage
   end
 
@@ -20,6 +11,10 @@ class UserController < ApplicationController
   end
 
   def main
+    if session[:user_id] == nil
+      redirect_to("/")
+    end
+
   end
 
 def count
