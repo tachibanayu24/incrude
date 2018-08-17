@@ -53,36 +53,55 @@ end
     @work_state6_sub = "社員全体に大きな刺激を与えました！"
     @work_state7_sub = "ブラック企業を消し去りました！"
     @work_state8_or_up_sub = "明日も会社を爆破しましょう！"
+
+    @work_state_img0 = "work_state0.png"
+    @work_state_img1 = "work_state1.png"
+    @work_state_img2 = "work_state2.png"
+    @work_state_img3 = "work_state3.png"
+    @work_state_img4 = "work_state4.png"
+    @work_state_img5 = "work_state5.png"
+    @work_state_img6 = "work_state6.png"
+    @work_state_img7 = "work_state7.png"
+    @work_state_img8_or_up = "work_state8_or_up.png"
   end
 
   def current_work_state
     if    @current_user.count == 0 then
       @work_msg = @work_state0
       @work_msg_sub = @work_state0_sub
+      @work_state_img = @work_state_img0
     elsif @current_user.count == 1 then
       @work_msg = @work_state1
       @work_msg_sub = @work_state1_sub
+      @work_state_img = @work_state_img1
     elsif @current_user.count == 2 then
       @work_msg = @work_state2
       @work_msg_sub = @work_state2_sub
+      @work_state_img = @work_state_img2
     elsif @current_user.count == 3 then
       @work_msg = @work_state3
       @work_msg_sub = @work_state3_sub
+      @work_state_img = @work_state_img3
     elsif @current_user.count == 4 then
       @work_msg = @work_state4
       @work_msg_sub = @work_state4_sub
+      @work_state_img = @work_state_img4
     elsif @current_user.count == 5 then
       @work_msg = @work_state5
       @work_msg_sub = @work_state5_sub
+      @work_state_img = @work_state_img5
     elsif @current_user.count == 6 then
       @work_msg = @work_state6
       @work_msg_sub = @work_state6_sub
+      @work_state_img = @work_state_img6
     elsif @current_user.count == 7 then
       @work_msg = @work_state7
       @work_msg_sub = @work_state7_sub
+      @work_state_img = @work_state_img7
     else
       @work_msg = @work_state8_or_up
       @work_msg_sub = @work_state8_or_up_sub
+      @work_state_img = @work_state_img8_or_up
     end
   end
 

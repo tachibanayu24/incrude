@@ -11,7 +11,7 @@
   <p class="font_forcus">
     労働スタンプは<%= @current_user.count %>回押されています。
   </p>
-  <%= image_tag('dummy.png', :size => '150x150') %>
+  <%= image_tag(@work_state_img, :size => '150x150') %>
   <% if @current_user.count > 0 %>
     <p>あなたは前回の労働で、<%= @work_msg %><br>
   <%= @work_msg_sub %></p>
