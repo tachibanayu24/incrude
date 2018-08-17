@@ -24,7 +24,6 @@ class UserController < ApplicationController
 def count
   @current_user.count += 1
   @current_user.save
-  redirect_to("/user/mypage")
 end
 
   def current_user
@@ -34,14 +33,14 @@ end
 
   def work_state
     @work_state0 = "あなたはまだ労働スタンプを押していません"
-    @work_state1 = "あなたは前回の労働で、嫌味な同期を倒しました"
-    @work_state2 = "あなたは前回の労働で、仕事中に感情が爆発して大暴れしました"
-    @work_state3 = "あなたは前回の労働で、会社のお金を着服して豪遊しました"
-    @work_state4 = "あなたは前回の労働で、怖い上司を倒しました"
-    @work_state5 = "あなたは前回の労働で、高圧的な取引先を爆破しました"
-    @work_state6 = "あなたは前回の労働で、パワハラ社長を倒しました"
-    @work_state7 = "あなたは前回の労働で、会社を爆破しました"
-    @work_state8_or_up = "あなたは前回の労働で、また会社を爆破しました"
+    @work_state1 = "嫌味な同期を倒しました"
+    @work_state2 = "仕事中に感情が爆発して大暴れしました"
+    @work_state3 = "会社のお金を着服して豪遊しました"
+    @work_state4 = "怖い上司を倒しました"
+    @work_state5 = "高圧的な取引先を爆破しました"
+    @work_state6 = "パワハラ社長を倒しました"
+    @work_state7 = "会社を爆破しました"
+    @work_state8_or_up = "また会社を爆破しました"
 
     @work_state0_sub = "労働のよろこびを感じたら、スタンプを押しましょう！"
     @work_state1_sub = "労働環境が改善されました！"
