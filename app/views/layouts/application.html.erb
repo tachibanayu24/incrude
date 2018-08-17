@@ -34,11 +34,6 @@
 
   <body>
 <!-- ここからフラッシュメッセージ -->
-  <% if flash[:notice] %>
-    <div class="notice lead text-center flash">
-      <%= flash[:notice]%>
-    </div>
-  <% end %>
 <!-- ここまでフラッシュメッセージ -->
     <%= yield %>
 

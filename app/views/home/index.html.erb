@@ -1,6 +1,11 @@
 
 <!-- キャッチフレーズはじめ -->
 <div class="catchphrase">
+  <% if flash[:notice] %>
+    <div class="notice lead text-center flash" style="font-size: small;">
+      <%= flash[:notice]%>
+    </div>
+  <% end %>
   <div class="catchphrase_main"><p class="catchphrase_main">労働のよろこびを感じよう</p></div>
   <p class="catchphrase_sub">1日1回、労働後はincRudeで労働スタンプを押して、<br>
   あなたの会社が良くなる様をフォロワーにシェアしましょう</p>
