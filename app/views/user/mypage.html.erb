@@ -27,8 +27,10 @@
 </div>
 
 <div class="text-right">
-  <button type="button" class="btn btn-info mypage_button" onclick="location.href=''" style="margin-bottom: 10px;">あなたのがんばりをシェア</button><br>
-  <a href="https://twitter.com/share" class="twitter-share-button" data-text="言いたいことはこれだよ！">Tweet</a>
+  <a href="https://twitter.com/share" class="twitter-share-button" data-text=
+  "<%= @current_user.count %>日目の労働を終えました。今日は<%= @work_msg %>。<%= @work_msg_sub %>
+#incRude">tweet</a>
+  <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
   <!-- 1.モーダルを表示する為のボタン -->
   <button class="btn btn-danger mypage_button" data-toggle="modal" data-target="#exampleModalCenter" style="margin-bottom: 40px;">
       労働日数をリセット
