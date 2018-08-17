@@ -1,5 +1,6 @@
 class UserController < ApplicationController
-  before_action :current_user, :work_state
+  before_action :current_user, :const_work_state, :current_work_state
+  # after_action :work_state
   def signup
   end
 
@@ -24,6 +25,7 @@ class UserController < ApplicationController
 def count
   @current_user.count += 1
   @current_user.save
+  redirect_to("/user/mypage")
 end
 
   def current_user
@@ -31,7 +33,7 @@ end
     @current_user ||= User.find(session[:user_id])
   end
 
-  def work_state
+  def const_work_state
     @work_state0 = "あなたはまだ労働スタンプを押していません"
     @work_state1 = "嫌味な同期を倒しました"
     @work_state2 = "仕事中に感情が爆発して大暴れしました"
@@ -51,7 +53,9 @@ end
     @work_state6_sub = "社員全体に大きな刺激を与えました！"
     @work_state7_sub = "ブラック企業を消し去りました！"
     @work_state8_or_up_sub = "明日も会社を爆破しましょう！"
+  end
 
+  def current_work_state
     if    @current_user.count == 0 then
       @work_msg = @work_state0
       @work_msg_sub = @work_state0_sub
