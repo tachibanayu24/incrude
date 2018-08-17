@@ -1,3 +1,8 @@
+<% if flash[:notice] %>
+  <div class="notice lead text-center flash" style="font-size: small;">
+    <%= flash[:notice]%>
+  </div>
+<% end %>
 <div class="text-center">
     <!-- <h3 class="bg-info" style="padding: 5px;"><%= @current_user.name %></h3> -->
     <h3 class="about_title"><%= @current_user.name %></h3>
@@ -23,6 +28,7 @@
 
 <div class="text-right">
   <button type="button" class="btn btn-info mypage_button" onclick="location.href=''" style="margin-bottom: 10px;">あなたのがんばりをシェア</button><br>
+  <a href="https://twitter.com/share" class="twitter-share-button" data-text="言いたいことはこれだよ！">Tweet</a>
   <!-- 1.モーダルを表示する為のボタン -->
   <button class="btn btn-danger mypage_button" data-toggle="modal" data-target="#exampleModalCenter" style="margin-bottom: 40px;">
       労働日数をリセット
