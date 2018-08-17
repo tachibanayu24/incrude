@@ -25,11 +25,26 @@
           </button>
         </div>
         <div class="modal-body">
-          <%= @work_msg %>
-          <%= @work_msg_sub %>
+          <% if @current_user.count == 1 %>
+            <%= @work_state1 %> <%= @work_state1_sub %>
+          <% elsif @current_user.count == 2 %>
+            <%= @work_state2 %> <%= @work_state2_sub %>
+          <% elsif @current_user.count == 3 %>
+            <%= @work_state3 %> <%= @work_state3_sub %>
+          <% elsif @current_user.count == 4 %>
+            <%= @work_state4 %> <%= @work_state4_sub %>
+          <% elsif @current_user.count == 5 %>
+            <%= @work_state5 %> <%= @work_state5_sub %>
+          <% elsif @current_user.count == 6 %>
+            <%= @work_state6 %> <%= @work_state6_sub %>
+          <% elsif @current_user.count == 7 %>
+            <%= @work_state7 %> <%= @work_state7_sub %>
+          <% else %>
+            <%= @work_state8_or_up %> <%= @work_state8_or_up_sub %>
+          <% end %>
         </div>
         <div class="modal-footer">
-          <%= link_to "確定", "/user/count", class: 'btn btn-danger', :method => :post %>
+          <%= link_to "確定", "/user/count", class: 'btn btn-primary', :method => :post  %>
         </div>
       </div>
     </div>

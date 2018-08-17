@@ -19,7 +19,9 @@ Rails.application.routes.draw do
 
   get '/about' => 'home#about'
 
-  get 'user/work_state' => 'user#work_state'
+  get 'user/current_work_state' => 'user#current_work_state'
+
+  get 'user/update_work_state' => 'user#update_work_state'
 
   # テストアカウントのログイン
   get 'sessions/testCreate' => 'sessions#testCreate'
