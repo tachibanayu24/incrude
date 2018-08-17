@@ -1,26 +1,26 @@
-<div class="row">
-  <div class="col-sm-4 text-center">
-    <h3 class="bg-info" style="padding: 5px;"><%= @current_user.name %></h3>
-    <img src= "<%= @current_user.image %>" class="user_img" width="100" height="100">
-    <div class="twitter_id">
+<div class="text-center">
+    <!-- <h3 class="bg-info" style="padding: 5px;"><%= @current_user.name %></h3> -->
+    <h3 class="about_title"><%= @current_user.name %></h3>
+    <img src= "<%= @current_user.image %>" class="user_img" width="150" height="150">
+    <div class="twitter_id text-center">
       <p>@<%= @current_user.twitter_id %></p>
     </div>
-  </div>
-  <div class="col-sm-8 text-left">
-    <div>
-      <h1><br></h1>
-    </div>
-    <p class="font_forcus">
-      労働スタンプは<%= @current_user.count %>回押されています。</p>
-      <% if @current_user.count > 0 %>
-        <p>あなたは前回の労働で、<%= @work_msg %><br>
-      <%= @work_msg_sub %></p>
-      <% else %>
-        <p>まだあなたは労働スタンプを押していません。<br>
-        スタンプを押して、労働のよろこびを共有しましょう！</p>
-      <% end %>
-  </div>
 </div>
+<div class="text-center">
+  <h1><br></h1>
+  <p class="font_forcus">
+    労働スタンプは<%= @current_user.count %>回押されています。
+  </p>
+  <%= image_tag('dummy.png', :size => '150x150') %>
+  <% if @current_user.count > 0 %>
+    <p>あなたは前回の労働で、<%= @work_msg %><br>
+  <%= @work_msg_sub %></p>
+  <% else %>
+    <p>まだあなたは労働スタンプを押していません。<br>
+    スタンプを押して、労働のよろこびを共有しましょう！</p>
+  <% end %>
+</div>
+
 <div class="text-right">
   <button type="button" class="btn btn-info mypage_button" onclick="location.href=''" style="margin-bottom: 10px;">あなたのがんばりをシェア</button><br>
   <!-- 1.モーダルを表示する為のボタン -->
