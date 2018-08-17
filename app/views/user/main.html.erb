@@ -17,30 +17,53 @@
     <div class="modal-dialog modal-dialog-centered" role="document">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLongTitle">
-            <% @current_user.count += 1 %>
+          <% @current_user.count += 1 %>
+          <h5 class="modal-title" id="exampleModalLongTitle" style="font-size: 20px;">
             <strong><%= @current_user.count %>日目</strong>の労働お疲れ様です！</h5>
           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">&times;</span>
           </button>
         </div>
-        <div class="modal-body">
+        <div class="modal-body modal_block">
           <% if @current_user.count == 1 %>
-            <%= @work_state1 %> <%= @work_state1_sub %>
+            <p class="modal_main"><%= @work_state1 %></p><br>
+            <%= image_tag("dummy.png", class: 'modal_icon') %><br>
+            <p class="modal_sub"><%= @work_state1_sub %></p>
+
           <% elsif @current_user.count == 2 %>
-            <%= @work_state2 %> <%= @work_state2_sub %>
+            <p class="modal_main"><%= @work_state2 %></p><br>
+            <%= image_tag("dummy.png", class: 'modal_icon') %><br>
+            <p class="modal_sub"><%= @work_state2_sub %></p>
+
           <% elsif @current_user.count == 3 %>
-            <%= @work_state3 %> <%= @work_state3_sub %>
+            <p class="modal_main"><%= @work_state3 %></p><br>
+            <%= image_tag("dummy.png", class: 'modal_icon') %><br>
+            <p class="modal_sub"><%= @work_state3_sub %></p>
+
           <% elsif @current_user.count == 4 %>
-            <%= @work_state4 %> <%= @work_state4_sub %>
+            <p class="modal_main"><%= @work_state4 %></p><br>
+            <%= image_tag("dummy.png", class: 'modal_icon') %><br>
+            <p class="modal_sub"><%= @work_state4_sub %></p>
+
           <% elsif @current_user.count == 5 %>
-            <%= @work_state5 %> <%= @work_state5_sub %>
+            <p class="modal_main"><%= @work_state5 %></p><br>
+            <%= image_tag("dummy.png", class: 'modal_icon') %><br>
+            <p class="modal_sub"><%= @work_state5_sub %></p>
+
           <% elsif @current_user.count == 6 %>
-            <%= @work_state6 %> <%= @work_state6_sub %>
+            <p class="modal_main"><%= @work_state6 %></p><br>
+            <%= image_tag("dummy.png", class: 'modal_icon') %><br>
+            <p class="modal_sub"><%= @work_state6_sub %></p>
+
           <% elsif @current_user.count == 7 %>
-            <%= @work_state7 %> <%= @work_state7_sub %>
+            <p class="modal_main"><%= @work_state7 %></p><br>
+            <%= image_tag("dummy.png", class: 'modal_icon') %><br>
+            <p class="modal_sub"><%= @work_state7_sub %></p>
+
           <% else %>
-            <%= @work_state8_or_up %> <%= @work_state8_or_up_sub %>
+            <p class="modal_main"><%= @work_state8_or_up %></p><br>
+            <%= image_tag("dummy.png", class: 'modal_icon') %><br>
+            <p class="modal_sub"><%= @work_state8_or_up_sub %></p>
           <% end %>
         </div>
         <div class="modal-footer">
