@@ -50,5 +50,5 @@ test:
 production:
   <<: *default
   database: incrude_production
-  username: incrude
-  password: <%= ENV['INCRUDE_DATABASE_PASSWORD'] %>
+  username: root
+  password:

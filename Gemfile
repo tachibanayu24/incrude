@@ -56,3 +56,7 @@ gem 'devise'
 gem 'omniauth'
 gem 'omniauth-twitter'
 gem 'dotenv-rails'
+
+group :production, :staging do
+    gem 'unicorn'
+end
