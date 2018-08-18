@@ -1,3 +1,4 @@
+<% @page_title = "About Us" %>
 <p class="about_title text-center">About Us</p>
 <div class="container-fluid desctiption_parent">
   <div class="row">
@@ -22,28 +23,28 @@
 </div>
 
 <div class="text-center">
-  <%= image_tag('tachibana.png', :class => "about_us_icon") %>
+  <%= link_to(image_tag('tachibana.png', :class => "about_us_icon"),"https://twitter.com/tachibanayu24", :target => "_blank") %>
   <div style="font-size:x-large;">
     Yuto Tachibana
   </div>
   <div style="margin-bottom: 20px;">
     某SIerで企画をやっています。<br>
     好きなものはAlexaと暗号通貨<br>
-    Twitter: <a href="https://twitter.com/tachibanayu24">@tachibanayu24</a>
+    Twitter: <a href="https://twitter.com/tachibanayu24" target="_blank">@tachibanayu24</a>
   </div>
 </div>
 
 <div class="user-margin"></div>
 
 <div class="text-center">
-  <%= image_tag('seki.png', :class => 'about_us_icon') %>
+  <%= link_to(image_tag('seki.png', :class => 'about_us_icon'),"https://twitter.com/seki_huruwanai", :target => "_blank") %>
   <div style="font-size:x-large;">
     Kenki Seki
   </div>
   <div style="margin-bottom: 100px;">
     大学院で光ネットワークの経路制御について研究してます。<br>
     面白いことが好きです<br>
-    Twitter: <a href="https://twitter.com/seki_huruwanai">@seki_huruwanai</a><br>
+    Twitter: <a href="https://twitter.com/seki_huruwanai" target="_blank">@seki_huruwanai</a><br>
   </div>
   <p style="margin: 30px; font-size: 14px;">お問い合わせは上記のTwitterまでお願いします。</p>
 </div>

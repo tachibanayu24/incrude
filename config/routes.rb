@@ -3,8 +3,6 @@ Rails.application.routes.draw do
 
   root 'home#index'
 
-  get 'user/signup'
-
   get 'user/signin'
 
   get 'user/signout' => 'sessions#destroy'
